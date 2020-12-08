@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+
+
+
+	<div class="row justify-content-center mt-5">
+	  <div class="col-8">
+	    <label for="">Tag</label>
+	    <textarea class="form-control" name=""  cols="30" rows="2" id="tag-area"></textarea>
+	      <div class="tag-area mt-2">
+	      
+	      </div>
+	  </div>
+	</div>
+
+
+
+
+
+
+
+	<script src="jquery.min.js"></script>
+
+
+	
+
+
+
+
+	<script>
+		$(document).ready(function(){
+
+	
+
+		   $("#tag-area").keyup(function(){
+		      
+			   	$(".tag-area").html('');
+
+			    var all_tag = $(this).val();
+
+			    var tags = all_tag.split(",");
+			   	for(var i = 0; i< tags.length; i++){
+			   		 var tag = tags[i].trim();
+			   		 if(tag != ''){
+			   		 	$(".tag-area").append('<span  class="single-tag padding">'+tag+'</span>');
+			   		 }
+			   	}
+		   })
+		  
+		  
+		  
+		})
+	</script>
+
+
+
+
+
+
+</body>
+</html>
